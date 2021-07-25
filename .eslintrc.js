@@ -12,6 +12,7 @@ module.exports = {
   ],
   settings: {
     'import/resolver': {
+      node: {},
       typescript: {},
     },
   },
@@ -47,13 +48,9 @@ module.exports = {
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': ['error'],
     'no-use-before-define': 'off',
+    'react/jsx-props-no-spreading': 'off',
     '@typescript-eslint/no-use-before-define': ['error'],
-    '@typescript-eslint/explicit-function-return-type': [
-      'error',
-      {
-        allowExpressions: true,
-      },
-    ],
+    '@typescript-eslint/no-non-null-assertion': 'off',
     'import/extensions': [
       'error',
       'ignorePackages',
@@ -63,4 +60,12 @@ module.exports = {
       },
     ],
   },
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx'],
+      rules: {
+        '@typescript-eslint/explicit-module-boundary-types': ['off'],
+      },
+    },
+  ],
 };
