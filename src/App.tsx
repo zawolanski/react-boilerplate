@@ -1,3 +1,5 @@
+import Button from '@components/Button';
+
 const App = (): JSX.Element => (
   <div className="App">
     <header className="App-header">
@@ -12,6 +14,7 @@ const App = (): JSX.Element => (
       >
         Learn React
       </a>
+      <Button />
     </header>
   </div>
 );
