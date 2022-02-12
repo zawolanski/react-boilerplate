@@ -1,13 +1,13 @@
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
+import Root from '@pages/Root';
 import '@/index.css';
-import App from '@/App';
 import '@/localization/i18n';
 
 ReactDOM.render(
   <Suspense fallback="loading">
     <React.StrictMode>
-      <App />
+      <Root />
     </React.StrictMode>
   </Suspense>,
   document.getElementById('root')
